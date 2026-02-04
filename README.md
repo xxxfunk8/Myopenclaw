@@ -11,6 +11,7 @@
 - Qwen Max - 超大规模模型
 - 长上下文模型
 - 文本嵌入模型
+- **Kimi-K2.5** - Moonshot AI的高级多模态模型（支持图像理解）
 
 ## 文件结构
 
@@ -18,7 +19,11 @@
 ├── modelscope_adapter.js              # ModelScope API 适配器
 ├── openclaw_modelscope_integration.js # 集成安装脚本
 ├── modelscope_provider_config.js      # Provider 配置模板
+├── kimi_modelscope_adapter.js         # Kimi-K2.5 模型适配器
+├── kimi_modelscope_config.js          # Kimi-K2.5 模型配置
+├── kimi_integration.js                # Kimi模型集成脚本
 ├── MODELSCOPE_INTEGRATION.md         # 详细使用文档
+├── KIMI_INTEGRATION.md               # Kimi模型使用指南
 └── README.md                         # 本文件
 ```
 
@@ -59,10 +64,11 @@ node openclaw_modelscope_integration.js
 
 ## 技术细节
 
-- **API兼容性**: 适配魔搭(DashScope) API
-- **模型支持**: Qwen系列模型及其他魔搭模型
+- **API兼容性**: 适配魔搭(DashScope) API 和魔搭推理API
+- **模型支持**: Qwen系列模型、Kimi-K2.5及其他魔搭模型
 - **配置方式**: 通过环境变量和配置文件
 - **集成深度**: 与OpenClaw模型系统完全集成
+- **多模态支持**: 支持文本和图像理解（Kimi-K2.5）
 
 ## 注意事项
 
